@@ -8,8 +8,8 @@ class TeacherController < ApplicationController
     end
 
     delete "/teachers/:id" do
-        Teacher.find(param[:id]).destroy     
-        204
+        Teacher.find(params[:id]).destroy     
+        status 204
     end
 
 

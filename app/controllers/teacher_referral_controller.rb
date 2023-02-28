@@ -4,7 +4,7 @@ class TeacherReferralController < ApplicationController
     end
 
     post "/teacher_referrals" do 
-        TeacherReferral.create(teacher_params).to_json
+        TeacherReferral.create(teacher_referral_params).to_json
     end
 
     delete "/teachers_referrals/:id" do
@@ -16,7 +16,7 @@ class TeacherReferralController < ApplicationController
     private
 
     def teacher_referral_params
-        allowed_params = %w(student_id teacher_id comment)
+        allowed_params = %w(student_id teacher_id date comment)
         params.select {|param,value| allowed_params.include?(param)}
     end
 end
