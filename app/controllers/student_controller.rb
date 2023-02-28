@@ -13,10 +13,10 @@ class StudentController < ApplicationController
     end
 
 
-    Private
-
+    private
+    
     def student_params
-        allowed_params = %w(last_name first_name grade sex_m_f)
+        allowed_params = %w(last_name first_name grade sex_m_or_f nickname)
         params.select {|param,value| allowed_params.include?(param)}
     end
 end

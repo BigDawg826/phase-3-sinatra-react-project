@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2023_02_26_205908) do
     t.string "first_name"
     t.integer "grade"
     t.string "sex_m_or_f"
+    t.string "nickname"
   end
 
   create_table "teacher_referrals", force: :cascade do |t|

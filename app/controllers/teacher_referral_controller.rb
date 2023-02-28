@@ -13,10 +13,10 @@ class TeacherReferralController < ApplicationController
     end
 
 
-    Private
+    private
 
     def teacher_referral_params
-        allowed_params = %w(last_name first_name sex_m_f)
+        allowed_params = %w(student_id teacher_id comment)
         params.select {|param,value| allowed_params.include?(param)}
     end
 end
